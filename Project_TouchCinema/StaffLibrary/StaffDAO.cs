@@ -37,7 +37,7 @@ namespace StaffLibrary
                     cmd.Parameters.AddWithValue("@password", password);
                     cmd.Parameters.AddWithValue("@isActive", true);
                     SqlDataReader reader = cmd.ExecuteReader();
-                    if (reader.HasRows)
+                    if (reader.Read())
                     {
                         string firstName = reader["firstName"].ToString();
                         string lastName = reader["lastName"].ToString();

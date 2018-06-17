@@ -34,7 +34,7 @@ namespace ScheduleLibrary
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     cmd.Parameters.AddWithValue("@id", scheduleID);
                     SqlDataReader reader = cmd.ExecuteReader();
-                    if (reader.HasRows)
+                    if (reader.Read())
                     {
                         DateTime date = (DateTime) reader["date"];
                         string movieID = reader["movieID"].ToString();

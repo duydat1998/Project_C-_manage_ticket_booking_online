@@ -34,7 +34,7 @@ namespace OrderLibary
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     cmd.Parameters.AddWithValue("@orderID", orderID);
                     SqlDataReader reader = cmd.ExecuteReader();
-                    if (reader.HasRows)
+                    if (reader.Read())
                     {
                         string scheduleID = reader["scheduleID"].ToString();
                         string phone = reader["phone"].ToString();
