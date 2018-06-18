@@ -53,10 +53,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MemberLibrary\MemberLibrary.csproj">
-      <Project>{51e562e7-d443-4d44-a873-3ba99a705c58}</Project>
-      <Name>MemberLibrary</Name>
-    </ProjectReference>
     <ProjectReference Include="..\StaffLibrary\StaffLibrary.csproj">
       <Project>{de23ab60-adf5-474e-8e90-65a4dea4b93f}</Project>
       <Name>StaffLibrary</Name>
