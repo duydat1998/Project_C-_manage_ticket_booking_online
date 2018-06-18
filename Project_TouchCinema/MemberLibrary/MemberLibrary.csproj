@@ -45,5 +45,15 @@
     <Compile Include="MemberDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MovieLibrary\MovieLibrary.csproj">
+      <Project>{ae8e4890-2e5a-4a70-b483-0aa2fabf3e04}</Project>
+      <Name>MovieLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ScheduleLibrary\ScheduleLibrary.csproj">
+      <Project>{45553fd2-443d-4578-ab78-85312a40afef}</Project>
+      <Name>ScheduleLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

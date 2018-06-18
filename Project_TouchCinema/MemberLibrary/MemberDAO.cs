@@ -7,6 +7,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using MovieLibrary;
+using ScheduleLibrary;
 
 namespace MemberLibrary
 {
@@ -40,9 +41,19 @@ namespace MemberLibrary
             }
         }
 
-        private string getConnection()
+        private string GetConnection()
         {
             return ConfigurationManager.ConnectionStrings[DATABASENAME].ConnectionString;
+        }
+
+        private void SetUpConnect(string commandLine)
+        {
+            conn = new SqlConnection(GetConnection());
+            cmdLine = commandLine;
+            if(conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+            }
         }
 
         public MemberDTO CheckLoginMember(string Username, string Password)
@@ -50,10 +61,9 @@ namespace MemberLibrary
             MemberDTO member = null;
             try
             {
-                conn = new SqlConnection(getConnection());
-                cmdLine = "Select username, password, firstName, lastName, phone, email, birthDate, avatar, isActive " +
+                SetUpConnect("Select username, password, firstName, lastName, phone, email, birthDate, avatar, isActive " +
                                 "From Member " +
-                                "Where username = @Username AND password = @Password;";
+                                "Where username = @Username AND password = @Password;");
                 cmd = new SqlCommand(cmdLine, conn);
                 cmd.Parameters.AddWithValue("@Username", Username);
                 cmd.Parameters.AddWithValue("@Password", Password);
@@ -90,10 +100,9 @@ namespace MemberLibrary
             int point = 0;
             try
             {
-                conn = new SqlConnection(getConnection());
-                cmdLine = "Select point " +
+                SetUpConnect("Select point " +
                             "From Point " +
-                            "Where username = @Username";
+                            "Where username = @Username");
                 cmd = new SqlCommand(cmdLine, conn);
                 cmd.Parameters.AddWithValue("@Username", Username);
                 dReader = cmd.ExecuteReader();
@@ -118,10 +127,9 @@ namespace MemberLibrary
             bool checker = false;
             try
             {
-                conn = new SqlConnection(getConnection());
-                cmdLine = "Update Point " +
+                SetUpConnect("Update Point " +
                             "Set point = @Point " +
-                            "Where username = @Username";
+                            "Where username = @Username");
                 cmd = new SqlCommand(cmdLine, conn);
                 cmd.Parameters.AddWithValue("@Point", point);
                 cmd.Parameters.AddWithValue("@Username", Username);
@@ -143,11 +151,10 @@ namespace MemberLibrary
             bool checker = false;
             try
             {
-                conn = new SqlConnection(getConnection());
-                cmdLine = "Update Member " +
+                SetUpConnect("Update Member " +
                             "Set password = @Password, firstName = @First, lastName = @Last, phone = @Phone," +
                                 " email = @Email, birthDate = @Birth, avatar = @Avatar, isActive = @IsActive" +
-                            "Where username = @Username";
+                            "Where username = @Username");
                 cmd = new SqlCommand(cmdLine, conn);
                 cmd.Parameters.AddWithValue("@Password", dto.Password);
                 cmd.Parameters.AddWithValue("@First", dto.FirstName);
@@ -172,56 +179,109 @@ namespace MemberLibrary
             return checker;
         }
 
-
-        public List<MemberLibrary.MemberDTO> SearchMemberByUsername(string username)
+        public List<MovieDTO> SearchListMoiveMemberGuest(string movieName)
         {
-            List<MemberLibrary.MemberDTO> result = null;
-
-            SqlConnection con = new SqlConnection(getConnection());
-            con.Open();
+            List<MovieDTO> listMovive = null;
             try
             {
-                string sql = "SELECT * FROM Member WHERE username LIKE %@username%";
-                SqlCommand cmd = new SqlCommand(sql, con);
-                cmd.Parameters.AddWithValue("@username", username);
-                SqlDataReader dr = cmd.ExecuteReader();
-                if (dr.HasRows)
+                SetUpConnect("Select movieTitle, length, rating, startDate, poster, linkTrailer, producer, year " +
+                            "From Movie " +
+                            "Where movieTitle Like  @MovieName ");
+                cmd = new SqlCommand(cmdLine, conn);
+                cmd.Parameters.AddWithValue("@MovieName", "'%'" + movieName + "'%'");
+                dReader = cmd.ExecuteReader();
+                if (dReader.HasRows)
                 {
-                    while (dr.Read())
+                    listMovive = new List<MovieDTO>();
+                    while (dReader.Read())
                     {
-
-                        MemberLibrary.MemberDTO dto = new MemberLibrary.MemberDTO
+                        MovieDTO dto = new MovieDTO
                         {
-                            Username = dr.GetString(0),
-                            Password = dr.GetString(1),
-                            FirstName = dr.GetString(2),
-                            LastName = dr.GetString(3),
-                            PhoneNum = dr.GetString(4),
-                            Email = dr.GetString(5),
-                            Birthdate = dr.GetDateTime(6),
-                            isActive = dr.GetBoolean(8)
+                            MovieTitle = dReader.GetString(0),
+                            Length = dReader.GetInt32(1),
+                            Rating = dReader.GetInt32(2),
+                            StartDate = dReader.GetDateTime(3),
+                            Poster = dReader.GetString(4),
+                            LinkTrailer = dReader.GetString(5),
+                            Producer = dReader.GetString(6),
+                            Year = dReader.GetInt32(7),
                         };
-                        result.Add(dto);
+                        listMovive.Add(dto);
                     }
-
                 }
+            }
+            catch (Exception)
+            {
+                listMovive = null;                
             }
             finally
             {
-                con.Close();
+                CloseConnect();
             }
-
-            return result;
+            return listMovive;
         }
-
-        public bool DeactivateMember(string username)
+       
+        public List<MemberDTO> SearchMemberByUsername(string username)
         {
-            bool check = false;
-
-
-
-            return check;
+            List<MemberDTO> listMember = null;
+            try
+            {
+                SetUpConnect("Select username, firstName, lastName, phone, email, birthDate, isActive " +
+                    "From Member " +
+                    "Where username Like @Username");
+                cmd = new SqlCommand(cmdLine, conn);
+                cmd.Parameters.AddWithValue("@Username", "'%'" + username + "'%'");
+                dReader = cmd.ExecuteReader();
+                if (dReader.HasRows)
+                {
+                    listMember = new List<MemberDTO>();
+                    while (dReader.Read())
+                    {
+                        MemberDTO dto = new MemberDTO
+                        {
+                            Username = dReader.GetString(0),
+                            FirstName = dReader.GetString(1),
+                            LastName = dReader.GetString(2),
+                            PhoneNum = dReader.GetString(3),
+                            Email = dReader.GetString(4),
+                            Birthdate = dReader.GetDateTime(5),
+                            isActive= dReader.GetBoolean(6)
+                        };
+                        listMember.Add(dto);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                listMember = null;                
+            }
+            return listMember;
         }
 
+        public bool RegisterAccountGuest(MemberDTO dto)
+        {
+            bool checker = false;
+            try
+            {
+                SetUpConnect("Insert Into Member " +
+                    "Values(@Username, @Password, @FirstName, @LastName, @Phone, @Email, @BirthDate, @Avatar, @isActive)");
+                cmd = new SqlCommand(cmdLine, conn);
+                cmd.Parameters.AddWithValue("@Username", dto.Username);
+                cmd.Parameters.AddWithValue("@Password", dto.Password);
+                cmd.Parameters.AddWithValue("@FirstName", dto.FirstName);
+                cmd.Parameters.AddWithValue("@LastName", dto.LastName);
+                cmd.Parameters.AddWithValue("@Phone", dto.PhoneNum);
+                cmd.Parameters.AddWithValue("@Email", dto.Email);
+                cmd.Parameters.AddWithValue("@BirthDate", dto.Birthdate);
+                cmd.Parameters.AddWithValue("@Avatar", dto.ImageLink);
+                cmd.Parameters.AddWithValue("@isActive", dto.isActive);
+                checker = cmd.ExecuteNonQuery() > 0;
+            }
+            catch (Exception)
+            {
+                checker = false;
+            }
+            return checker;
+        }
     }
 }

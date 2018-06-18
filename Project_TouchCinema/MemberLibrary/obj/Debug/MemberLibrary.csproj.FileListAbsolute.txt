@@ -4,3 +4,9 @@ D:\CodeProgrameDemo\C Sharp Class Projects\TouchCinema\MemberLibrary\obj\Debug\M
 D:\CodeProgrameDemo\C Sharp Class Projects\TouchCinema\MemberLibrary\obj\Debug\MemberLibrary.csproj.CoreCompileInputs.cache
 D:\CodeProgrameDemo\C Sharp Class Projects\TouchCinema\MemberLibrary\obj\Debug\MemberLibrary.dll
 D:\CodeProgrameDemo\C Sharp Class Projects\TouchCinema\MemberLibrary\obj\Debug\MemberLibrary.pdb
+D:\CodeProgrameDemo\C Sharp Class Projects\TouchCinema\MemberLibrary\bin\Debug\MovieLibrary.dll
+D:\CodeProgrameDemo\C Sharp Class Projects\TouchCinema\MemberLibrary\bin\Debug\ScheduleLibrary.dll
+D:\CodeProgrameDemo\C Sharp Class Projects\TouchCinema\MemberLibrary\bin\Debug\MovieLibrary.pdb
+D:\CodeProgrameDemo\C Sharp Class Projects\TouchCinema\MemberLibrary\bin\Debug\ScheduleLibrary.pdb
+D:\CodeProgrameDemo\C Sharp Class Projects\TouchCinema\MemberLibrary\bin\Debug\ScheduleLibrary.dll.config
+D:\CodeProgrameDemo\C Sharp Class Projects\TouchCinema\MemberLibrary\obj\Debug\MemberLibrary.csproj.CopyComplete
