@@ -1,0 +1,6 @@
+D:\CodeProgrameDemo\C Sharp Class Projects\TouchCinema\MemberLibrary\bin\Debug\MemberLibrary.dll
+D:\CodeProgrameDemo\C Sharp Class Projects\TouchCinema\MemberLibrary\bin\Debug\MemberLibrary.pdb
+D:\CodeProgrameDemo\C Sharp Class Projects\TouchCinema\MemberLibrary\obj\Debug\MemberLibrary.csprojAssemblyReference.cache
+D:\CodeProgrameDemo\C Sharp Class Projects\TouchCinema\MemberLibrary\obj\Debug\MemberLibrary.csproj.CoreCompileInputs.cache
+D:\CodeProgrameDemo\C Sharp Class Projects\TouchCinema\MemberLibrary\obj\Debug\MemberLibrary.dll
+D:\CodeProgrameDemo\C Sharp Class Projects\TouchCinema\MemberLibrary\obj\Debug\MemberLibrary.pdb
