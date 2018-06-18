@@ -283,5 +283,35 @@ namespace MemberLibrary
             }
             return checker;
         }
+
+        public bool RemoveMember(string username)
+        {
+            bool result = false;
+            SqlConnection conn = new SqlConnection(GetConnection());
+            if (conn != null)
+            {
+                if (conn.State == System.Data.ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
+                try
+                {
+                    string sql = "Update Member set isActive=@isActive WHERE username=@username";
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@username", username);
+                    cmd.Parameters.AddWithValue("@isActive", false);
+                    int count = cmd.ExecuteNonQuery();
+                    if (count > 0)
+                    {
+                        result = true;
+                    }
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+            return result;
+        }
     }
 }
