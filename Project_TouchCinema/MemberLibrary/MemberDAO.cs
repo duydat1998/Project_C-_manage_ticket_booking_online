@@ -218,7 +218,24 @@ namespace MemberLibrary
         {
             bool check = false;
 
-
+            SqlConnection con = new SqlConnection(getConnection());
+            con.Open();
+            try
+            {
+                string sql = "UPDATE Staff SET isActive=@isActive WHERE username=@username";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@isActive", false);
+                int count = cmd.ExecuteNonQuery();
+                if (count > 0)
+                {
+                    check = true;
+                }
+            }
+            finally
+            {
+                con.Close();
+            }
 
             return check;
         }

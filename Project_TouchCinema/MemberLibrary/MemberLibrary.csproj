@@ -51,8 +51,11 @@
       <Name>MovieLibrary</Name>
     </ProjectReference>
   </ItemGroup>
+<<<<<<< HEAD
+=======
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+>>>>>>> 5ddf3130b0feed19f83439bcc03ab744cb055750
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

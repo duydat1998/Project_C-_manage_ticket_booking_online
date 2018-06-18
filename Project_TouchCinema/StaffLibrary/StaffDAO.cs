@@ -67,8 +67,9 @@ namespace StaffLibrary
                 }
                 try
                 {
-                    string sql = "Update Staff set isActive=@isActive";
+                    string sql = "Update Staff set isActive=@isActive WHERE username=@username";
                     SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@username", username);
                     cmd.Parameters.AddWithValue("@isActive", false);
                     int count = cmd.ExecuteNonQuery();
                     if(count > 0)
