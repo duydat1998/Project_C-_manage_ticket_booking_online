@@ -1,0 +1,7 @@
+C:\Users\Huy\Documents\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\StaffLibrary\bin\Debug\StaffLibrary.dll.config
+C:\Users\Huy\Documents\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\StaffLibrary\bin\Debug\StaffLibrary.dll
+C:\Users\Huy\Documents\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\StaffLibrary\bin\Debug\StaffLibrary.pdb
+C:\Users\Huy\Documents\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\StaffLibrary\obj\Debug\StaffLibrary.csprojAssemblyReference.cache
+C:\Users\Huy\Documents\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\StaffLibrary\obj\Debug\StaffLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Huy\Documents\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\StaffLibrary\obj\Debug\StaffLibrary.dll
+C:\Users\Huy\Documents\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\StaffLibrary\obj\Debug\StaffLibrary.pdb
