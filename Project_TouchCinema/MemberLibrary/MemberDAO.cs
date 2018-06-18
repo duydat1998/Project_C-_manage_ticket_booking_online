@@ -17,7 +17,7 @@ namespace MemberLibrary
         private SqlDataReader dReader;
         private SqlCommand cmd;
         private string cmdLine;
-        private readonly string DATABASENAME = "[]";
+        private readonly string DATABASENAME = "TouchCinemaDB";
 
         public MemberDAO()
         {
@@ -172,6 +172,56 @@ namespace MemberLibrary
             return checker;
         }
 
-        
+
+        public List<MemberLibrary.MemberDTO> SearchMemberByUsername(string username)
+        {
+            List<MemberLibrary.MemberDTO> result = null;
+
+            SqlConnection con = new SqlConnection(getConnection());
+            con.Open();
+            try
+            {
+                string sql = "SELECT * FROM Member WHERE username LIKE %@username%";
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.Parameters.AddWithValue("@username", username);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+
+                        MemberLibrary.MemberDTO dto = new MemberLibrary.MemberDTO
+                        {
+                            Username = dr.GetString(0),
+                            Password = dr.GetString(1),
+                            FirstName = dr.GetString(2),
+                            LastName = dr.GetString(3),
+                            PhoneNum = dr.GetString(4),
+                            Email = dr.GetString(5),
+                            Birthdate = dr.GetDateTime(6),
+                            isActive = dr.GetBoolean(8)
+                        };
+                        result.Add(dto);
+                    }
+
+                }
+            }
+            finally
+            {
+                con.Close();
+            }
+
+            return result;
+        }
+
+        public bool DeactivateMember(string username)
+        {
+            bool check = false;
+
+
+
+            return check;
+        }
+
     }
 }

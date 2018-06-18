@@ -47,5 +47,75 @@ namespace MovieLibrary
             }
             return movieName;
         }
+
+        public bool AddNewMovie(MovieLibrary.MovieDTO dto)
+        {
+            bool check = false;
+
+            SqlConnection con = new SqlConnection(strConnection);
+            con.Open();
+            try
+            {
+                string sql = "INSERT INTO Movie(movieID,movieTitle,length,rating,startDate,poster,linkTrailer,producer,year)" +
+                    " VALUES(@movieID,@movieTitle,@length,@rating,@startDate,@poster,@linkTrailer,@producer,@year)";
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.Parameters.AddWithValue("@movieID", dto.MovieID);
+                cmd.Parameters.AddWithValue("@movieTitle", dto.MovieTitle);
+                cmd.Parameters.AddWithValue("@length", dto.Length);
+                cmd.Parameters.AddWithValue("@rating", dto.Rating);
+                cmd.Parameters.AddWithValue("@startDate", dto.StartDate);
+                cmd.Parameters.AddWithValue("@poster", dto.Poster);
+                cmd.Parameters.AddWithValue("@linkTrailer", dto.LinkTrailer);
+                cmd.Parameters.AddWithValue("@producer", dto.Producer);
+                cmd.Parameters.AddWithValue("@year", dto.Year);
+                int count = cmd.ExecuteNonQuery();
+                if (count > 0)
+                {
+                    check = true;
+                }
+            }
+            finally
+            {
+                con.Close();
+            }
+
+            return check;
+        }
+
+        public bool UpdateMovie(MovieLibrary.MovieDTO dto)
+        {
+            bool check = false;
+
+            SqlConnection con = new SqlConnection(strConnection);
+            con.Open();
+            try
+            {
+                string sql = "UPDATE Movie" +
+                    " SET movieTitle=@movieTitle,length=@length,rating=@rating,startDate=@startDate,poster=@poster,linkTrailer=@linkTrailer,producer=@producer,year=@year" +
+                    " WHERE movieID=@movieID";
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.Parameters.AddWithValue("@movieTitle", dto.MovieTitle);
+                cmd.Parameters.AddWithValue("@length", dto.Length);
+                cmd.Parameters.AddWithValue("@rating", dto.Rating);
+                cmd.Parameters.AddWithValue("@startDate", dto.StartDate);
+                cmd.Parameters.AddWithValue("@poster", dto.Poster);
+                cmd.Parameters.AddWithValue("@linkTrailer", dto.LinkTrailer);
+                cmd.Parameters.AddWithValue("@producer", dto.Producer);
+                cmd.Parameters.AddWithValue("@year", dto.Year);
+                cmd.Parameters.AddWithValue("@movieID", dto.MovieID);
+                int count = cmd.ExecuteNonQuery();
+                if (count > 0)
+                {
+                    check = true;
+                }
+            }
+            finally
+            {
+                con.Close();
+            }
+
+            return check;
+        }
+
     }
 }
