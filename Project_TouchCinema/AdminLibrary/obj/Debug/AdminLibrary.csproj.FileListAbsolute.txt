@@ -1,0 +1,17 @@
+D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\AdminLibrary\bin\Debug\AdminLibrary.dll.config
+D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\AdminLibrary\bin\Debug\AdminLibrary.dll
+D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\AdminLibrary\bin\Debug\AdminLibrary.pdb
+D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\AdminLibrary\bin\Debug\MemberLibrary.dll
+D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\AdminLibrary\bin\Debug\MovieLibrary.dll
+D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\AdminLibrary\bin\Debug\StaffLibrary.dll
+D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\AdminLibrary\bin\Debug\MemberLibrary.pdb
+D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\AdminLibrary\bin\Debug\MemberLibrary.dll.config
+D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\AdminLibrary\bin\Debug\StaffLibrary.pdb
+D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\AdminLibrary\bin\Debug\StaffLibrary.dll.config
+D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\AdminLibrary\bin\Debug\MovieLibrary.pdb
+D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\AdminLibrary\bin\Debug\MovieLibrary.dll.config
+D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\AdminLibrary\obj\Debug\AdminLibrary.csprojResolveAssemblyReference.cache
+D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\AdminLibrary\obj\Debug\AdminLibrary.csproj.CoreCompileInputs.cache
+D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\AdminLibrary\obj\Debug\AdminLibrary.csproj.CopyComplete
+D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\AdminLibrary\obj\Debug\AdminLibrary.dll
+D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\AdminLibrary\obj\Debug\AdminLibrary.pdb

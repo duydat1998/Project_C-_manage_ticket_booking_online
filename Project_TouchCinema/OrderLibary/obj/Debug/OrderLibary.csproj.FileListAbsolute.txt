@@ -1,0 +1,7 @@
+D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\OrderLibary\bin\Debug\OrderLibary.dll.config
+D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\OrderLibary\bin\Debug\OrderLibary.dll
+D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\OrderLibary\bin\Debug\OrderLibary.pdb
+D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\OrderLibary\obj\Debug\OrderLibary.csprojResolveAssemblyReference.cache
+D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\OrderLibary\obj\Debug\OrderLibary.csproj.CoreCompileInputs.cache
+D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\OrderLibary\obj\Debug\OrderLibary.dll
+D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\OrderLibary\obj\Debug\OrderLibary.pdb
