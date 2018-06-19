@@ -54,7 +54,6 @@ D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\P
 D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\Project_TouchCinema\bin\Antlr3.Runtime.dll
 D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\Project_TouchCinema\bin\AspNet.ScriptManager.bootstrap.dll
 D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\Project_TouchCinema\bin\AspNet.ScriptManager.jQuery.dll
-D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\Project_TouchCinema\bin\MemberLibrary.dll
 D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\Project_TouchCinema\bin\Microsoft.AI.Agent.Intercept.dll
 D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\Project_TouchCinema\bin\Microsoft.AI.DependencyCollector.dll
 D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\Project_TouchCinema\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -78,8 +77,6 @@ D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\P
 D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\Project_TouchCinema\bin\WebGrease.dll
 D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\Project_TouchCinema\bin\AdminLibrary.pdb
 D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\Project_TouchCinema\bin\AdminLibrary.dll.config
-D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\Project_TouchCinema\bin\MemberLibrary.pdb
-D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\Project_TouchCinema\bin\MemberLibrary.dll.config
 D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\Project_TouchCinema\bin\MovieLibrary.pdb
 D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\Project_TouchCinema\bin\MovieLibrary.dll.config
 D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\Project_TouchCinema\bin\OrderLibary.pdb
