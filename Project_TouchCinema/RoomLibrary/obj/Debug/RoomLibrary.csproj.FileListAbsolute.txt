@@ -1,7 +1,0 @@
-D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\RoomLibrary\bin\Debug\RoomLibrary.dll.config
-D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\RoomLibrary\bin\Debug\RoomLibrary.dll
-D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\RoomLibrary\bin\Debug\RoomLibrary.pdb
-D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\RoomLibrary\obj\Debug\RoomLibrary.csprojResolveAssemblyReference.cache
-D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\RoomLibrary\obj\Debug\RoomLibrary.csproj.CoreCompileInputs.cache
-D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\RoomLibrary\obj\Debug\RoomLibrary.dll
-D:\Studying\GitHub\Project_C-_manage_ticket_booking_online\Project_TouchCinema\RoomLibrary\obj\Debug\RoomLibrary.pdb
